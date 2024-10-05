@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="Untitled-3.css"> <!-- Link to your CSS file -->
+    <style>
+        /* Apply box-sizing for better control */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin-top: 10px;
+    background-color: #f4f4f4;
+    overflow-x: hidden; /* Disable horizontal scrolling */
+}
+
+/* About Section Styles */
+.about-section {
+    padding: 20px;
+    max-width: 1200px; /* Limit the maximum width */
+    margin: 0 auto; /* Center the section */
+}
+
+.about-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping for mobile responsiveness */
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+.about-text-area {
+    flex: 1; /* Allow the text area to grow and shrink */
+    padding: 20px;
+    min-width: 300px; /* Minimum width for smaller screens */
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    text-align: left; /* Align text left on larger screens */
+}
+
+.about-image-area {
+    flex: 1; /* Allow the image area to grow and shrink */
+    padding: 20px;
+    display: flex;
+    justify-content: center; /* Center the image area */
+    align-items: center; /* Center the image vertically */
+}
+
+.about-image {
+    width: 100%; /* Set width to 100% for responsive images */
+    height: auto;
+    max-width: 300px; /* Optional: limit the max size */
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+/* Animation Class */
+.about-animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Journey Section Styles */
+.about-journey-section {
+    position: relative;
+    padding: 20px;
+    overflow: hidden;
+    background-color: #e0e0e0; /* Set background color for mobile */
+    width: 100%; /* Ensure it takes the full width */
+    border-radius: 19%; /* Set border radius for rounded corners */
+}
+
+.about-journey-title {
+    text-align: left;
+    margin: 0;
+}
+
+/* Journey Content */
+.about-journey-content {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+/* Journey Background */
+.about-journey-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color:#e0e0e0; /* Background fill color */
+    transition: width 1s ease-in-out;
+}
+
+/* Animate on scroll */
+.about-animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.about-animate-background {
+    width: 100%; /* Fill from left to right */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center items for mobile */
+        width: 100%; /* Set to full width */
+    }
+
+    .about-text-area,
+    .about-image-area {
+        width: 100%; /* Set both areas to full width */
+        text-align: center; /* Center text */
+        padding: 10px; /* Adjust padding for mobile */
+    }
+
+    .about-image {
+        max-width: 100%; /* Responsive image on mobile */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="stain stain1" ></div>
+    <div class="stain stain2"></div>
+    <div class="stain stain3"></div>
+    <div class="stain stain4"></div>
+
+    <header>
+        
+        <nav class="navbar">
+            <div class="navbar-logo">
+                <a href="index.html">
+                    <img src="img/Transparent logo.jpg" alt="Logo">
+                </a>
+            </div>
+            <div class="navbar-toggle" id="navbar-toggle">
+                &#9776; <!-- Hamburger icon -->
+            </div>
+            <ul class="navbar-menu" id="navbar-menu">
+                <li><button class="close-button" id="close-button">&times;</button></li> <!-- Close button -->
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="prduct.html">PRODUCTS</a></li>
+                <li><a href="testabout.html"class="active">ABOUT US</a></li>
+                <li><a href="call.html">CONTACT US</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+<!-- cnt us small -->
+
+<div class="small_cnt_message-icon" onclick="toggleCard()">
+    <img src="img/message.png" alt="Message Icon" class="small_cnt_icon"> <!-- Image tag for circular icon -->
+    <div class="small_cnt_message-card" id="messageCard">
+        <div class="small_cnt_card-content">
+            <h3>Get in Touch</h3>
+            <a href="contact.html" class="contact-button">Contact Us</a>
+            <a href="https://wa.me/your_whatsapp_number" class="whatsapp-button">WhatsApp</a>
+        </div>
+    </div>
+</div>
+<br><br>
+
+<section class="about-section" style="position: relative;">
+    <div class="about-container">
+        <div class="about-text-area">
+            <h2>Who We Are</h2>
+            <p style="text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, recusandae saepe! Pariatur, sunt cum labore quod animi repudiandae nam. Accusantium sunt nemo ad atque quae vero repellat, sapiente eveniet aliquid modi deserunt reprehenderit, perferendis similique molestias ex, cumque beatae blanditiis mollitia officia ea fugiat. Distinctio veniam quas illo. Illum, omnis. Quasi, quos quae. Corrupti dolor distinctio ducimus accusamus expedita debitis quidem facilis iste error neque dolores, ex ut molestias sequi omnis ipsa laudantium ab ea autem? Minima illum, eum unde alias repellat possimus iure tempore sunt, veritatis vel aspernatur, nisi cupiditate perferendis nulla! Neque aliquid rem ab sint labore rerum distinctio delectus, aperiam hic harum nobis qui doloribus expedita! Provident quisquam ex, ea suscipit impedit praesentium totam, rerum quos quo doloribus atque, dolorum nulla. Ut ad eligendi exercitationem amet ex. Provident veritatis aperiam temporibus, ratione, nam soluta quaerat molestias velit dolore praesentium ullam doloribus itaque exercitationem aliquid atque consectetur consequatur libero incidunt at officia. Magni perspiciatis cumque, vel ut commodi dignissimos dolor temporibus saepe repudiandae tempore ratione, aut maiores sequi natus dicta sit excepturi dolore? Dicta fugiat optio exercitationem maiores harum. Obcaecati iste laborum, voluptatem ad, ipsam adipisci officiis, provident eaque sed beatae perspiciatis corporis magni quos dignissimos dolorem rerum?</p>
+        </div>
+        <div class="about-image-area">
+            <img src="img/mm.png" alt="Image 1" class="about-image">
+        </div>
+    </div>
+
+    <div class="about-journey-section">
+        <div class="about-journey-background"></div> <!-- Dynamic background -->
+        <div class="about-journey-content">
+            <h2 class="about-journey-title">Journey to Remember</h2>
+            <p></p>
+        </div>
+    </div>
+<br><br><br><br>
+    <div class="about-container">
+        <div class="about-image-area">
+            <img src="img/mm.png" alt="Image 2" class="about-image">
+        </div>
+        <div class="about-text-area">
+            <h2>Our Story</h2>
+            <p style="text-align: justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, et quae nesciunt molestias quidem quos culpa reiciendis quibusdam illo sint deleniti enim laborum voluptatibus nihil ad veniam eum. Magnam deleniti nihil, consequuntur eaque culpa minima voluptatum tempore reprehenderit officia molestias vitae quas dicta, repellat veritatis! Error, itaque mollitia! Consequuntur accusamus vel labore est, esse ipsam fuga explicabo ab, quam delectus quidem tempora impedit repellat fugiat? Repellat, enim placeat, libero velit totam minima exercitationem facilis voluptas autem unde esse cum porro quos maxime impedit! Esse dolores pariatur optio vitae eveniet debitis nesciunt! Modi tempora accusantium eaque fugiat dicta mollitia, quo dolores explicabo veritatis quis facilis qui. Aspernatur, officiis nam inventore labore animi similique, quia doloribus vitae suscipit explicabo consectetur distinctio facere pariatur, cupiditate voluptates perferendis eum nobis! Rem, suscipit blanditiis consequatur sint et vel praesentium assumenda aliquid iste, iusto modi! Voluptatibus inventore unde quisquam provident adipisci eos, aut est, officiis fugit, consectetur nulla commodi labore perspiciatis eaque incidunt itaque iure voluptatum ad animi. Modi est minima cumque expedita, nihil nisi provident. Aut nisi excepturi ex voluptatibus eaque officia. Rem nisi eos vitae. Ullam maiores consectetur maxime non soluta aperiam autem dolor rem quos cumque. Libero nihil alias tenetur expedita? Voluptate, nihil.</p>
+        </div>
+    </div>
+</section>
+
+<br><br>
+<!-- Footer  -->    
+<footer style="background-color: #333; color: #ffffff; padding: 20px 0;">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+
+        <!-- Social Icons and Address -->
+        <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 15px;">
+            <div style="margin-right: 20px;">
+                <a href="https://www.facebook.com" style="color: #ffffff; margin: 0 10px; text-decoration: none;">
+                    <i class="fab fa-facebook-square" style="font-size: 24px;"></i>
+                </a>
+                <a href="https://www.instagram.com" style="color: #ffffff; margin: 0 10px; text-decoration: none;">
+                    <i class="fab fa-instagram" style="font-size: 24px;"></i>
+                </a>
+                <a href="https://www.linkedin.com" style="color: #ffffff; margin: 0 10px; text-decoration: none;">
+                    <i class="fab fa-linkedin" style="font-size: 24px;"></i>
+                </a>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-bottom: 15px;">
+            <p>Address: No 24, Kapuela Road, Ambalangoda, Sri Lanka</p>
+        </div>
+
+        <!-- Company Name and Contact Information -->
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+            <div style="text-align: left;">
+                <p style="margin: 0;">The Ceylon Spice Haven (Pvt) Ltd.</p>
+            </div>
+            <div style="text-align: right;">
+                <p  style="margin: 0;  ">Contact: +94 741 471 91 | +61 123456</p>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-bottom: 10px;">
+            <p style="margin: 0;">
+              <a href="mailto:punsithranvidu@gmail.com" style="color: #ffffff; text-decoration: none;">punsithranvidu@gmail.com</a>
+            </p>
+            <p style="margin: 0;">
+                <a href="mailto:ceylonspicehaven1@gmail.com" style="color: #ffffff; text-decoration: none;">ceylonspicehaven1@gmail.com</a>
+            </p>
+        </div>
+
+        <!-- Copyright -->
+        <div style="text-align: center; margin-top: 10px;">
+            <p style="margin: 0;">Copyright © 2024 Ceylon Spice Haven - All Rights Reserved.</p>
+        </div>
+
+    </div>
+</footer>
+
+<style>
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        footer div {
+            flex-direction: column; /* Stack elements vertically on smaller screens */
+            align-items: center; /* Center align items */
+            text-align: center; /* Center text */
+        }
+    }
+</style>
+
+<script>
+// Add animations when the user scrolls to the sections
+document.addEventListener('DOMContentLoaded', function () {
+    const textAreas = document.querySelectorAll('.about-text-area');
+    const imageAreas = document.querySelectorAll('.about-image');
+    const journeyContent = document.querySelector('.about-journey-content');
+    const journeyBackground = document.querySelector('.about-journey-background');
+
+    function animateElements() {
+        const windowHeight = window.innerHeight;
+
+        // Animate text and images in "Who We Are" and "Our Story"
+        textAreas.forEach((textArea) => {
+            const textPosition = textArea.getBoundingClientRect().top;
+            if (textPosition < windowHeight * 0.8) {
+                textArea.classList.add('about-animate');
+            }
+        });
+
+        imageAreas.forEach((image) => {
+            const imagePosition = image.getBoundingClientRect().top;
+            if (imagePosition < windowHeight * 0.8) {
+                image.classList.add('about-animate');
+            }
+        });
+
+        // Animate "Journey to Remember"
+        const journeyPosition = journeyContent.getBoundingClientRect().top;
+        if (journeyPosition < windowHeight * 0.8) {
+            journeyContent.classList.add('about-animate');
+            journeyBackground.classList.add('about-animate-background');
+        }
+    }
+
+    window.addEventListener('scroll', animateElements);
+    animateElements(); // Initial check
+});
+</script>
+
+
+<!-- small cnt card  script    -->
+
+<script>
+    function toggleCard() {
+        const card = document.getElementById('messageCard');
+        card.classList.toggle('small_cnt_show'); // Toggle the card visibility
+    }
+
+    // Close the card if the user clicks outside of it
+    document.addEventListener('click', function(event) {
+        const card = document.getElementById('messageCard');
+        const messageIcon = document.querySelector('.small_cnt_message-icon');
+
+        // Check if the click was outside the message icon and the card
+        if (!messageIcon.contains(event.target) && card.classList.contains('small_cnt_show')) {
+            card.classList.remove('small_cnt_show'); // Hide the card
+        }
+    });
+
+</script>
+
+<!-- (Hamburger icon)-->
+
+<script>
+    
+    // Toggle Navbar Menu (Hamburger icon)
+    const navbarToggle = document.getElementById('navbar-toggle');
+    const navbarMenu = document.getElementById('navbar-menu');
+    const closeButton = document.getElementById('close-button');
+    
+    navbarToggle.addEventListener('click', () => {
+        navbarMenu.classList.toggle('active');
+    });
+    
+    // Close button functionality
+    closeButton.addEventListener('click', () => {
+        navbarMenu.classList.remove('active');
+    });
+    </script>
+
+
+</body>
+</html>

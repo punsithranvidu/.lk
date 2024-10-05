@@ -1,0 +1,1322 @@
+      /* General styles */
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    /* Message icon container */
+    .small_cnt_message-icon {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 60px; /* Width of the icon */
+        height: 60px; /* Height of the icon */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Optional: Box shadow for depth */
+        z-index: 1000; /* Ensure it's above other content */
+        transition: transform 0.2s; /* Smooth hover effect */
+        border-radius: 50%;
+        background-color: #000; /* Black background color for the circular icon */
+    }
+
+    .small_cnt_message-icon:hover {
+        transform: scale(1.1); /* Scale effect on hover */
+    }
+
+    /* Icon inside the message icon */
+    .small_cnt_icon {
+        width: 80%; /* Adjust size to fit */
+        height:auto; /* Maintain aspect ratio */
+        border-radius: 50%;
+    }
+
+    /* Message card styles */
+    .small_cnt_message-card {
+        position: absolute;
+        bottom: 70px; /* Position above the icon */
+        right: -10px; /* Position to the right */
+        width: 200px;
+        background-color: #fff; /* White background for card */
+        border: 1px solid #ccc; /* Border for card */
+        border-radius: 8px;
+        padding: 15px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for card */
+        display: none; /* Initially hidden */
+        z-index: 999; /* Above other elements */
+        transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    }
+
+    /* Card content styling */
+    .small_cnt_card-content {
+        text-align: center; /* Center text */
+    }
+
+    .small_cnt_card-content h3 {
+        margin: 0 0 10px; /* Margin for header */
+        font-size: 18px; /* Header size */
+    }
+
+    /* Button styles */
+    .small_cnt_card-content a {
+        display: block;
+        margin: 10px 0;
+        text-decoration: none;
+        color: #fff; /* Text color */
+        background-color:#6C757D; /* Button background color */
+        padding: 10px 15px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease; /* Smooth background color transition */
+    }
+
+    .small_cnt_card-content a:hover {
+        background-color:#5A6268; /* Darker button color on hover */
+    }
+
+    /* Show the card */
+    .small_cnt_show {
+        display: block; /* Show the card */
+        opacity: 1; /* Fade in */
+        transform: translateY(0); /* Slide in */
+
+
+  /* home fisrt */
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      padding: 20px; /* Add padding to avoid sticking */
+      box-sizing: border-box; /* Ensure padding doesn't cause overflow */
+      overflow-x: hidden;
+      padding-top: 100px; /* Add padding to avoid content overlap with the fixed header */
+  }
+  
+  header {
+      position: fixed; /* Change from sticky to fixed */
+      top: 0;
+      left: 0;
+      width: 100%; /* Ensure it stretches across the full width */
+      background-color: rgb(5, 5, 5);
+      z-index: 1000; /* Keep it above other elements */
+      box-shadow: none;
+  }
+  
+  .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 40px; /* Increase padding to make navbar wider */
+  }
+  
+  .navbar-logo img {
+      height: 80px; /* Increase logo size */
+      transition: transform 0.7s ease, height 0.7s ease; /* Smooth transition for scaling and height */
+      margin-top: 3px;
+  }
+  
+  .navbar-logo img:hover {
+      transform: scale(1.1); /* Slightly larger on hover */
+  }
+  
+  @media (max-width: 600px) { /* Adjust the max-width value as needed */
+      .navbar-logo img {
+          height: 50px; /* Set the logo height to a smaller size */
+          transition: transform 0.7s ease, height 0.7s ease; /* Keep the smooth transition */
+      }
+  }
+  
+  .navbar-toggle {
+      display: none;
+      font-size: 30px;
+      color: white;
+      cursor: pointer;
+  }
+  
+  .navbar-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Default display for larger screens */
+}
+  
+  /* Styles for mobile menu */
+  .navbar-menu li {
+    margin: 20px 0; /* Space out menu items vertically */
+    text-align: center; /* Center align text for each menu item */
+}
+
+  
+  .navbar-menu li a {
+      text-decoration: none;
+      color: rgb(252, 244, 244);
+      font-size: 16px;
+      padding: 10px 15px;
+      font-weight: 500; /* Slightly bolder text */
+      transition: color 0.3s ease, font-size 0.3s ease, transform 0.3s ease; /* Added transform for the pop effect */
+  }
+  
+  .navbar-menu li a.active, 
+  .navbar-menu li a:hover {
+      color: white; /* Solid white text */
+      font-size: 20px; /* Slightly larger text */
+      transform: scale(1.1); /* Pop effect on hover */
+  }
+  
+  /* Close button visibility and style */
+  .close-button {
+      display: none; /* Hide close button initially */
+      background: none;
+      border: none;
+      color: white;
+      font-size: 30px;
+      cursor: pointer;
+      position: absolute;
+      top: 20px;
+      right: 20px; /* Position close button */
+  }
+  
+  /* Show close button only when the menu is active */
+  .navbar-menu.active .close-button {
+      display: block; /* Show close button when menu is active */
+  }
+  
+  /* Slider styles */
+  .slider {
+      margin-top: 55px;
+      position: relative;
+      max-width: 100%;
+      height: 570px;
+      overflow: hidden;
+  }
+  
+  .slides {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      transition: transform 1s ease-in-out;
+  }
+  
+  .slide {
+      flex: 1 0 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0; /* Start with invisible */
+      transition: opacity 1s ease-in-out; /* Smooth fade transition */
+  }
+  
+  .slide img {
+      width: 100%;
+      height: auto; /* Maintain aspect ratio */
+      object-fit: cover;
+  }
+  
+  .text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 36px;
+      font-weight: bold;
+      text-align: center;
+      padding: 0 20px; /* Optional: Add padding for better readability */
+  }
+  
+  /* Media queries for responsiveness */
+  @media only screen and (max-width: 768px) {
+      .navbar-toggle {
+          display: block; /* Show hamburger icon */
+      }
+  
+      .navbar-menu {
+        display: none; /* Hide menu by default on small screens */
+        flex-direction: column; /* Stack items vertically */
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        background-color: rgba(5, 5, 5, 0.8); /* Semi-transparent background to allow some image visibility */
+        background-image: url("img/slmr.png"); /* Add your background image here */
+        background-size: cover; /* Cover the entire menu */
+        background-position: center; /* Center the background image */
+        position: fixed; /* Fixed position for the menu */
+        top: 0; /* Align to the top */
+        left: -100%; /* Start off-screen to the left */
+        transition: left 0.5s ease; /* Smooth transition for sliding in */
+        z-index: 999; /* Ensure it sits above other elements */
+        padding-top: 60px; /* Space for the close button */
+        justify-content: center; /* Center items vertically */
+        align-items: center; /* Center items horizontally */
+        font: size 50px;
+    }
+  
+    .navbar-menu.active {
+      display: flex; /* Show menu when active */
+      left: 0; /* Slide in */
+      
+  }
+  
+  .navbar-menu li a {
+    margin-top: 50%;
+    text-align: center; /* Center align text for each menu item */
+    padding: 15px; /* Adjust padding */
+    font-size: 60px; /* Slightly larger text */
+    color: rgb(252, 244, 244); /* Default text color */
+    transition: color 0.3s ease, font-size 0.3s ease; /* Added transform for the pop effect */
+}
+  
+      .navbar-menu li a {
+          text-align: center;
+          padding: 15px; /* Adjust padding */
+          font-size: 18px; /* Slightly larger text */
+      }
+  
+      .slider {
+          height: 300px; /* Reduce height of the slider for mobile */
+      }
+  
+      .text {
+          font-size: 24px; /* Adjust text size */
+          padding: 0 10px; /* Reduce padding for smaller screens */
+      }
+  
+      .centered-text {
+          top: 70%; /* Adjust position for smaller screens */
+          font-size: 2rem; /* Adjust font size for smaller screens */
+      }
+  }
+  
+/* Srilankan spice expoter TEXT*/
+
+.centered-text {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 3px  auto; /* Center it horizontally */
+  position: relative; /* Keep position relative so it stays in flow */
+  top: 0; /* Start from the top */
+  overflow: visible; /* Ensure no content is hidden */
+  display: block; /* Ensure proper block behavior */
+  width: 100%; /* Full width to prevent shifting */
+  color:rgb(95, 92, 92); /* Text color */
+  padding: 10px 0; /* Add a small amount of padding */
+  gap: 2rem;
+}
+
+.animated-word {
+  opacity: 0;
+  position: relative;
+  transition: opacity 1s, transform 1s; /* Slow down the transition */
+  transform: translateY(100%);
+  font-size: inherit; /* Maintain consistent font size */
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hide {
+  opacity: 0;
+  transform: translateY(-100%);
+}
+
+/* Media queries for smaller screens */
+@media (max-width: 768px) {
+  .centered-text {
+    font-size: 1.8rem; /* Adjust font size for tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .centered-text {
+    font-size: 1.5rem; /* Adjust font size for mobile */
+  }
+}
+
+
+.animated-word {
+  min-width: 100px; /* Adjust the width for very small screens */
+}
+
+/* Team Section */
+.team-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-top: 20px;
+}
+
+.team-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 300px;
+  transition: transform 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-18px);
+}
+
+.card-image img {
+  width: 100%;
+  height: 310px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 20px;
+  text-align: center;
+}
+
+.card-content h2 {
+  margin: 10px 0;
+  color: #333;
+  font-size: 24px;
+}
+
+.card-content p {
+  color: #666;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+#tbody {
+    padding-top: 50px;
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-bottom: 50px;
+    background-color: #f2f2f2;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    margin: 50px;
+    overflow: hidden;
+}
+
+#tbody h2 {
+  font-family: Poppins, sans-serif;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+#tbody p {
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+}
+
+#img {
+  float: right;
+  margin-left: 20px;
+}
+
+#tbody a {
+  color: #007BFF;
+  text-decoration: underline;
+}
+
+#tbody a:hover {
+  color: #0056b3;
+}
+
+/* Fieldset Styles */
+fieldset {
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+fieldset:hover {
+  transform: scale(1.05);
+  border-color: #2c3e50;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background-color: #ccc;
+  margin: 20px 0;
+}
+
+.custom-heading {
+  font-size: 24px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* General Styles */
+body {
+font-family: Arial, sans-serif;
+margin: 0;
+padding: 0;
+background-color: #f4f4f4;
+line-height: 1.6;
+overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+#tbody {
+padding: 20px;
+background-color: #f2f2f2;
+box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+border-radius: 5px;
+margin: 50px auto;
+max-width: 1200px;
+width: 100%;
+box-sizing: border-box;
+}
+
+#tbody h2 {
+font-family: Poppins, sans-serif;
+font-size: 2rem;
+margin-bottom: 10px;
+}
+
+#tbody p {
+font-family: Montserrat, sans-serif;
+font-size: 18px;
+line-height: 1.8;
+word-wrap: break-word; /* Ensure long words break to avoid overflow */
+}
+
+#tbody img {
+max-width: 100%;
+height: auto;
+display: block;
+margin-bottom: 20px;
+}
+
+.custom-heading {
+font-size: 1.5rem;
+margin-top: 20px;
+color: #333;
+}
+
+hr {
+border: 0;
+height: 1px;
+background-color: #ccc;
+margin: 20px 0;
+}
+
+fieldset {
+border: 2px solid #ccc;
+border-radius: 8px;
+padding: 20px;
+transition: transform 0.3s ease-in-out;
+box-sizing: border-box;
+}
+
+fieldset:hover {
+transform: scale(1.05);
+border-color: #2c3e50;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+#tbody {
+    padding: 15px;
+    margin: 30px auto;
+    width: 100%;
+}
+
+#tbody h2 {
+    font-size: 1.5rem;
+}
+
+#tbody p {
+    font-size: 16px;
+}
+
+.custom-heading {
+    font-size: 1.25rem;
+}
+}
+
+@media (max-width: 480px) {
+#tbody {
+    padding: 10px;
+    margin: 20px auto;
+    width: 100%;
+}
+
+#tbody h2 {
+    font-size: 1.25rem;
+}
+
+#tbody p {
+    font-size: 14px;
+}
+
+.custom-heading {
+    font-size: 1rem;
+}
+
+fieldset {
+    padding: 10px;
+}
+}
+
+/* 3 product card in home page  */
+
+.card-section {
+display: flex;
+justify-content: space-around;
+width: 100%;
+max-width: 1200px; /* Limit the maximum width */
+margin: auto;
+gap: 10px;
+flex-wrap: wrap;
+padding: 20px; /* Add padding */
+box-sizing: border-box;
+}
+
+.flip-card {
+background-color: transparent;
+width: 40%; /* Default to 100% width */
+max-width: 300px; /* Limit maximum width */
+height: auto; /* Adjust height based on content */
+aspect-ratio: 2 / 3; /* Maintain aspect ratio */
+perspective: 1000px;
+margin: 10px auto; /* Center cards with margin */
+}
+
+.flip-card-inner {
+position: relative;
+width: 100%;
+height: 95%;
+text-align: center;
+transition: transform 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+transform-style: preserve-3d;
+border-radius: 15px;
+box-shadow:none;
+}
+
+.flip-card:hover .flip-card-inner {
+transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+position: absolute;
+width: 90%;
+height: 90%;
+backface-visibility: hidden;
+border-radius: 15px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 20px;
+box-sizing: border-box; /* Ensure padding fits within */
+filter: none; /* Ensure no filter is applied that could cause blur */
+-webkit-backface-visibility: hidden; /* Ensures the backface is hidden on Safari and older browsers */
+-moz-backface-visibility: hidden; /* Ensures the backface is hidden on Firefox */
+    /* Add border and shadow */
+    border: 2px solid rgba(0, 0, 0, 0.1); /* Adjust color and opacity as needed */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.flip-card-front {
+background-color: #ffffff;
+color: #000000;
+}
+
+.flip-card-front img {
+width: 80%;
+height: auto;
+border-radius: 10px;
+margin-bottom: 15px;
+}
+
+.flip-card-front h3 {
+font-size: 24px;
+margin: 10px 0;
+}
+
+.flip-card-front p {
+font-size: 18px;
+margin: 0;
+}
+
+.flip-card-back {
+background-color: #2c3e50;
+color: #ecf0f1;
+transform: rotateY(180deg);
+box-shadow: none;
+}
+
+.flip-card-back h3 {
+font-size: 22px;
+margin-bottom: 15px;
+}
+
+.flip-card-back ul {
+list-style: none;
+padding: 0;
+margin: 0;
+text-align: left;
+}
+
+.flip-card-back ul li {
+font-size: 16px;
+margin: 5px 0;
+padding-left: 20px;
+position: relative;
+}
+
+.flip-card-back ul li::before {
+content: '✔';
+position: absolute;
+left: 0;
+color: #ffeb3b;
+}
+
+.flip-card-back .btn {
+display: inline-block;
+margin-top: 20px;
+padding: 10px 20px;
+background-color: #ffeb3b;
+color: #333;
+text-transform: uppercase;
+font-weight: bold;
+border-radius: 50px;
+text-decoration: none;
+transition: background 0.3s, transform 0.3s;
+}
+
+.flip-card-back .btn:hover {
+background-color: #f1c40f;
+transform: scale(1.1);
+}
+
+.flip-card:hover .flip-card-inner {
+transform: rotateY(180deg);
+filter: none; /* Ensure no blur filter is applied during hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+.card-section {
+    flex-direction: column;
+    align-items: center;
+}
+
+.flip-card {
+    width: 80%; /* Adjust width for smaller screens */
+}
+}
+
+@media (max-width: 480px) {
+.flip-card {
+    width: 100%; /* Full width for very small screens */
+}
+
+.flip-card-front h3, .flip-card-back h3 {
+    font-size: 18px; /* Adjust text size */
+}
+
+.flip-card-front p, .flip-card-back ul li {
+    font-size: 14px; /* Adjust text size */
+}
+}
+
+/* Super Cool Image Slider CSS */
+/* Super Cool Image Slider CSS */
+/* Super Cool Image Slider CSS */
+.page-wrapper {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 15px; /* Added to reset any default padding */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider-wrapper {
+  position: relative;
+  width: 100%; /* Changed to ensure it's fully responsive */
+  max-width: 100%; /* Adjusted to prevent any overflow */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.slider-content {
+  display: flex;
+  width: 100%;
+  transition: transform 0.5s ease; /* Smooth transition for sliding */
+}
+
+.slider-item {
+  flex: 0 0 100%; /* Flex basis set to 100% */
+  display: block; /* Changed to block to improve layout control */
+}
+
+.slider-item img {
+  width: 100%;
+  height: auto; /* Adjusts height maintaining aspect ratio */
+  max-height: 450px; /* Maximum height for large screens */
+  object-fit: cover; /* Ensures the image covers the area */
+  transition: transform 0.5s ease;
+}
+
+.slider-item img:hover {
+  transform: scale(1.05); /* Zoom effect on hover */
+}
+
+.prev-button, .next-button {
+  position: absolute;
+  top: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 24px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-50%);
+  transition: background-color 0.3s;
+  z-index: 100;
+}
+
+.prev-button:hover, .next-button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev-button {
+  left: 10px;
+}
+
+.next-button {
+  right: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .slider-wrapper {
+    width: 95%; /* Adjusted for smaller screens */
+  }
+
+  .slider-item img {
+    max-height: 350px; /* Smaller height for tablet screens */
+  }
+
+  .prev-button, .next-button {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .slider-item img {
+    max-height: 250px; /* Reduced height for mobile screens */
+  }
+}
+
+
+
+/* manufact css */
+/* manufact css */
+
+html, body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  overflow-x: hidden; /* Prevents horizontal scroll */
+}
+
+/* Container */
+.crazy-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+/* Text Section */
+.crazy-text-section {
+  flex: 1; /* Allow flexibility in width */
+  min-width: 300px; /* Minimum width for text section */
+  padding-right: 20px; /* Space between text and image */
+}
+
+.crazy-sub-title {
+  font-size: 1.5rem; /* Adjusted to maintain consistency */
+  color: #666;
+}
+
+.crazy-main-title {
+  font-size: 2.5rem; /* Adjusted to maintain consistency */
+  font-weight: bold;
+  color: #333;
+}
+
+.crazy-description {
+  font-size: 1rem; /* Adjusted for consistency */
+  color: #444;
+  margin-top: 20px;
+}
+
+/* Steps Container */
+.crazy-steps-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns */
+  grid-template-rows: auto auto auto; /* Three rows */
+  gap: 30px; /* General gap between grid items */
+  margin-top: 20px; /* Added margin top for spacing */
+}
+
+/* Steps */
+.crazy-step {
+  background: #f9f9f9;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  opacity: 0; /* Hidden by default */
+  transform: translateY(20px); /* Start off-screen */
+  transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out; /* Smooth transition */
+}
+
+.crazy-step.animate {
+  opacity: 1; /* Ensure the step is visible */
+  transform: translateY(0); /* Reset translate to original position */
+}
+
+/* Optional: Delay each step’s animation for sequential effect */
+.crazy-step:nth-child(1) { transition-delay: 0.1s; }
+.crazy-step:nth-child(2) { transition-delay: 0.2s; }
+.crazy-step:nth-child(3) { transition-delay: 0.3s; }
+.crazy-step:nth-child(4) { transition-delay: 0.4s; }
+.crazy-step:nth-child(5) { transition-delay: 0.5s; }
+.crazy-step:nth-child(6) { transition-delay: 0.6s; }
+.crazy-step:nth-child(7) { transition-delay: 0.7s; }
+
+/* New Image Section */
+.crazy-image-section {
+  flex: 1; /* Allow flexibility in width */
+  min-width: 250px; /* Minimum width for image section */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.crazy-main-image {
+  width: 100%; /* Full width of its container */
+  max-width: 400px; /* Max width for larger screens */
+  border-radius: 10px; /* Slightly rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+  opacity: 0; /* Start hidden */
+  transform: translateX(100%); /* Start from the right */
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out; /* Animation */
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInFromLeft {
+  from { transform: translateX(-100px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+/* Optional: Media query for mobile adjustments */
+@media (max-width: 768px) {
+  .crazy-container {
+      flex-direction: column; /* Stack sections vertically */
+      padding: 20px; /* Reduced padding */
+  }
+
+  .crazy-text-section {
+      padding-right: 0; /* Remove right padding on smaller screens */
+      margin-bottom: 20px; /* Space below text section */
+  }
+
+  .crazy-steps-container {
+      grid-template-columns: 1fr; /* Stack steps vertically on smaller screens */
+  }
+
+  .crazy-image-section {
+      width: 100%; /* Full width on smaller screens */
+      margin-top: 20px; /* Add space above the image section */
+  }
+
+  .crazy-main-image {
+      max-width: 100%; /* Allow the image to scale down */
+      height: auto; /* Maintain aspect ratio */
+  }
+}
+
+
+/* Features Section Styles */
+.features-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  background-color: #f4f4f4;
+  margin-top: 20px;
+  width: 100%;
+  gap: 80px;
+}
+
+.feature {
+  text-align: center;
+  width: 250px; /* Fixed width for larger screens */
+  margin: 10px;
+  transform: translateY(20px);
+  opacity: 0; /* Start hidden for animation */
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out; /* Smooth transition */
+  display: flex;
+  flex-direction: column; /* Align children vertically */
+  align-items: center; /* Center children horizontally */
+   /* Adjust gap between image and text horizontally */
+}
+
+.feature.show {
+  opacity: 1; /* Ensure the feature is visible */
+  transform: translateY(0); /* Reset translate to original position */
+}
+
+.feature img {
+  width: 100px;
+  height: 100px;
+}
+
+.feature h3 {
+  color: #333;
+  margin: 5px 0;
+}
+
+.feature p {
+  font-size: 14px;
+  color: #666;
+  padding: 10px 7px; /* Only vertical padding */
+  text-align: center; /* Center the text */
+  margin: 0; /* Reset margin to avoid extra space */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .feature {
+      width: 90%; /* Allow for larger width on smaller screens */
+      margin: 10px auto; /* Center the feature with auto margins */
+  }
+
+  /* Additional adjustment for padding and alignment on small screens */
+  .features-container {
+      padding: 10px; /* Reduced padding for smaller screens */
+  }
+}
+
+/* css for feedback cards */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  overflow-x: hidden; /* Disable horizontal scrolling across the entire website */
+}
+
+/* Styling for the feedback card wrapper with a background image */
+.feedback_slider-wrapper {
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  background: url('img/slmr.png') no-repeat; 
+  background-size: cover;
+}
+
+/* Style for headings within the feedback section */
+h1 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Container for the feedback cards ensuring proper overflow and positioning */
+.feedback_testimonial-container {
+  position: relative;
+  max-width: 995px; /* Optimized width for showing 3 cards */
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* Setup for the horizontally scrollable feedback cards */
+.feedback_testimonial-cards {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 10px; /* Prevent scrollbar from overlapping content */
+  -ms-overflow-style: none;  /* Hides scrollbar in IE and Edge */
+  scrollbar-width: none;  /* Hides scrollbar in Firefox */
+}
+
+.feedback_testimonial-cards::-webkit-scrollbar {
+  display: none; /* Hides scrollbar in Chrome, Safari, and Opera */
+}
+
+/* Individual feedback card styling */
+.feedback_card {
+  flex: 0 0 270px; /* Card width and not growing or shrinking */
+  background: white;
+  border-radius: 30px;
+  padding: 20px;
+  height: 380px;
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15), 0 6px 6px rgba(0, 0, 0, 0.1);
+  scroll-snap-align: start;
+  margin-right: 30px; /* Space between cards */
+  transition: transform 0.3s ease; /* Smooth scaling on hover */
+  pointer-events: none;
+}
+
+/* Removes the right margin on the last card to eliminate unwanted space */
+.feedback_testimonial-cards .feedback_card:last-child {
+  margin-right: 0;
+}
+
+/* Logo within the feedback card */
+.feedback_logo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 10px auto;
+  display: block;
+  border: 4px solid #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Link and date text styling in the feedback card */
+.feedback_review-link, .feedback_date {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.8em;
+  display: block;
+  margin-top: 10px;
+}
+
+/* Responsive styling adjustments for smaller screens */
+@media (max-width: 960px) {
+  .feedback_testimonial-container {
+    max-width: 320px; /* Single card view on smaller screens */
+  }
+
+  .feedback_card {
+    margin-right: 13px; /* Reduced spacing on the right for the last card on mobile */
+    margin-bottom: 30px; /* Added space below each card for clarity */
+  }
+}
+
+/* Rating section styles */
+.feedback_rating-section {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.feedback_rating-link {
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+}
+
+.feedback_google-logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 10px;
+  background: #f0f0f0; /* Placeholder background for visibility */
+  position: relative;
+  left: -85px;
+}
+
+.feedback_rating {
+  margin-top: -60px;
+  margin-left: -45px;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.feedback_stars {
+  color: #ffc107; /* Star color */
+  margin-top: -40px;
+  margin-left: 110px;
+}
+
+.feedback_half-star::after {
+  content: '\9733'; /* Unicode star character */
+  color: #f0f0f0; /* Half-star effect */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  overflow: hidden;
+}
+
+.feedback_reviews-count {
+  font-size: 0.8em;
+  color: #666;
+  margin-left: 90px;
+  margin-top: -8px;
+}
+
+/* css for FQA */
+html, body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.fqacontainer {
+  display: flex; /* Use flexbox for layout */
+  width: 100%; /* Full width of the container */
+}
+
+.text-content {
+  width: 50%; /* Set width to 50% for text section */
+  padding: 20px; /* Padding around the content for spacing */
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.image-content {
+  width: 50%; /* Set width to 50% for image section */
+  display: flex;
+  justify-content: center; /* Center the image horizontally */
+  align-items: center; /* Center the image vertically */
+  padding: 20px; /* Padding around the image */
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.image {
+  max-width: 69%; /* Ensure image is responsive */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; /* Rounded corners for image */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+}
+
+/* FAQ styling */
+.faq {
+  background-color: #fff;
+  margin-top: 10px;
+  padding: 20px; /* Increased padding for a more spacious layout */
+  border: 1px solid #e0e0e0; /* Softer color for the border */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* More pronounced shadow for depth */
+  border-radius: 8px; /* Rounded corners for a modern look */
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transitions for hover effects */
+  box-sizing: border-box; /* Prevents padding from expanding the width */
+  position: relative; /* Required for absolute positioning of the toggle icon */
+}
+
+.faq:hover {
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15); /* Enhanced shadow on hover for a lifting effect */
+  transform: translateY(-2px); /* Slight raise effect on hover */
+}
+
+.question {
+  cursor: pointer;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 18px; /* Slightly larger font size for readability */
+  color: #333; /* Darker color for better readability */
+  position: relative; /* Required for absolute positioning of the toggle icon */
+}
+
+.toggle-icon {
+  position: absolute; /* Use absolute positioning */
+  right: 20px; /* Align toggle icon to the right */
+  top: 50%; /* Center vertically within the question */
+  transform: translateY(-50%); /* Centering adjustment */
+  font-size: 24px; /* Larger font size for better visibility */
+  color: #555; /* Softer color for the icon */
+}
+
+.answer {
+max-height: 0;
+overflow: hidden;
+transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
+padding: 0 10px;
+border-top: 1px solid #eee; /* Lighter border color for the answer section */
+color: #666; /* Softer text color */
+font-size: 16px; /* Appropriate font size for the content */
+line-height: 1.6; /* Improved line spacing */
+}
+
+.answer.open {
+  padding: 10px; /* Padding for expanded content */
+  max-height: 200px; /* Adequate space for expanded content */
+}
+
+.faq-header {
+  width: calc(100% - 60px); /* Full width minus 60px (30px on each side) */
+  margin: 20px 30px; /* 20px margin on top and bottom, 30px on left and right */
+  padding: 20px; /* Padding for the content */
+  background-color: #f8e8e8; /* Light pink background color */
+  text-align: left; /* Align text to the left */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds visual depth */
+  font-size: 24px; /* Larger font size for readability */
+  color: black; /* Text color */
+  line-height: 1.4; /* Line height for better text spacing */
+  border-radius: 15px; /* Adds rounded corners */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  box-sizing: border-box; /* Includes padding and border in the element's width */
+}
+
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .fqacontainer {
+      flex-direction: column; /* Stack vertically on smaller screens */
+  }
+  .text-content, .image-content {
+      width: 100%; /* Full width on smaller screens */
+  }
+  .faq {
+      width: 100%; /* Full width on smaller screens */
+      margin-left: 0; /* Adjust left margin to align correctly */
+  }
+
+  .faq-header {
+      padding: 20px; /* Simplified padding for smaller screens */
+  }
+
+  .toggle-icon {
+      font-size: 18px; /* Slightly smaller icon on smaller screens */
+      right: 5px; /* Adjust right positioning for smaller screens */
+  }
+
+  .question {
+      font-size: 18px; /* Slightly smaller font size for question on smaller screens */
+  }
+}

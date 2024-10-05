@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage with Slider</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        
+        <nav class="navbar">
+            <div class="navbar-logo">
+                <a href="index.html">
+                    <img src="img/Transparent logo.jpg" alt="Logo">
+                </a>
+            </div>
+            <div class="navbar-toggle" id="navbar-toggle">
+                &#9776; <!-- Hamburger icon -->
+            </div>
+            <ul class="navbar-menu" id="navbar-menu">
+                <li><button class="close-button" id="close-button">&times;</button></li> <!-- Close button -->
+                <li><a href="index.html" class="active">HOME</a></li>
+                <li><a href="prduct.html">PRODUCTS</a></li>
+                <li><a href="testabout.html">ABOUT US</a></li>
+                <li><a href="call.html">CONTACT US</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    
+
+ <!-- cnt us  icon  -->
+    
+ <div class="small_cnt_message-icon" onclick="toggleCard()">
+    <img src="img/message.png" alt="Message Icon" class="small_cnt_icon"> <!-- Image tag for circular icon -->
+    <div class="small_cnt_message-card" id="messageCard">
+        <div class="small_cnt_card-content">
+            <h3>Get in Touch</h3>
+            <a href="contact.html" class="contact-button">Contact Us</a>
+            <a href="https://wa.me/your_whatsapp_number" class="whatsapp-button">WhatsApp</a>
+        </div>
+    </div>
+</div>
+
+    <div class="slider">
+        <div class="slides">
+            <div class="slide active">
+                <img src="img/IMG_1737 - Copy.JPG" alt="Image 1">
+                <div class="text">Lorem ipsum dolor sit amet..</div>
+            </div>
+            <div class="slide">
+                <img src="img/kk.png" alt="Image 2">
+                <div class="text">Lorem ipsum dolor sit amet.</div>
+            </div>
+            <div class="slide">
+                <img src="img/mm.png" alt="Image 3">
+                <div class="text">Lorem ipsum dolor sit amet.</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="centered-text">
+        <span id="country" class="animated-word show" style="color:rgb(95, 92, 92);">Srilankan</span>
+        <span>Spices</span>
+        <span>Exporter</span>
+    </div>
+
+
+    <div class="team-container" >
+        <!-- Team Member Card 1 -->
+        <div class="team-card pop-card">
+            <div class="card-image">
+                <img src="img/1.jpeg" alt="gamge ">
+            </div>
+            <div class="card-content">
+                <h2>Thishen Gamage</h2>
+                <p>Research Supporter - Gathering and analyzing information for the site.</p>
+                <p>ID 105066696</p>
+            </div>
+        </div>
+
+        <!-- Team Member Card 2 -->
+        <div class="team-card pop-card">
+            <div class="card-image">
+                <img src="img/1.jpeg" alt="parmi">
+            </div>
+            <div class="card-content">
+                <h2>Parami Pathumika</h2>
+                <p>Team Leader - Leading the team and planning the website interface.</p>
+                <p> ID 105055801</p>
+            </div>
+        </div>
+
+        <!-- Team Member Card 3 -->
+        <div class="team-card pop-card">
+            <div class="card-image">
+                <img src="img/1.jpeg" alt="punsith">
+            </div>
+            <div class="card-content">
+                <h2>Punsith Ranvidu</h2>
+                <p>Programmer - Coding CSS and main HTML documents for the website.</p>
+                <p>ID 105058075</p>
+            </div>
+        </div>
+    </div><br>
+
+<!-- what we do -->
+<div id="tbody">
+    <fieldset>
+        <h2>Netcode</h2>
+        <hr>
+        <img id="img" src="img/TopicPageImg.png" alt="timg">
+        <p style="text-justify: auto;">We’re passionate about gaming and committed to delivering the best in gaming consoles and accessories. As a leading online store, we offer a diverse selection of both new and pre-owned products to suit every gamer’s needs. Explore our website for top-quality gear and exceptional service. For more details or inquiries, please <a href="enquire.html">Contact us</a>; we’re here to help!</p>
+        <br>
+        <h2>Our History</h2>
+        <hr>
+        <p>Founded in Sri Lanka in 2000, NetCode began as a local business before evolving into a fully online store. Over the years, we’ve sold over 500,000 products, gaining the trust and loyalty of gamers worldwide. Our commitment to quality and customer satisfaction has made us a trusted name in the gaming industry.</p>
+        <br>
+        <h2>Mission & Values</h2>
+        <hr>
+        <h2 class="custom-heading">Mission</h2>
+        <p>Our mission is to be the leading company in the gaming industry by offering the best products, unmatched quality, and building lasting trust with our customers. We are dedicated to enhancing the gaming experience with excellence and reliability.</p>
+        <h2 class="custom-heading">Values</h2>
+        <p>At NetCode, we value innovation, quality, and customer satisfaction. We are committed to becoming a prominent esports partner, sponsoring players, and supporting gaming communities. Our goal is to foster growth and excitement in the gaming world.</p>
+        <br>
+    </fieldset>
+</div>
+
+    <br><br>
+
+<!-- 3 product cards  -->
+     <section class="card-section">
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="img/kk.png" alt="Product 1">
+                    <h3>Product 1</h3>
+                    <p>LKR 50,000</p>
+                </div>
+                <div class="flip-card-back">
+                    <h3>Details</h3>
+                    <ul>
+                        <li>High Performance</li>
+                        <li>Sleek Design</li> 
+                        <li>Long Battery Life</li>
+                        <li>1-Year Warranty</li>
+                    </ul>
+                    <a href="contact.html" class="btn">Contact Us</a>
+                </div>
+            </div>
+        </div>
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="img/kk.png" alt="Product 2">
+                    <h3>Product 2</h3>
+                    <p>LKR 75,000</p>
+                </div>
+                <div class="flip-card-back">
+                    <h3>Details</h3>
+                    <ul>
+                        <li>Durable Material</li>
+                        <li>Modern Look</li>
+                        <li>Energy Efficient</li>
+                        <li>2-Year Warranty</li>
+                    </ul>
+                    <a href="contact.html" class="btn">Contact Us</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="img/kk.png" alt="Product 3">
+                    <h3>Product 3</h3>
+                    <p>LKR 100,000</p>
+                </div>
+                <div class="flip-card-back">
+                    <h3>Details</h3>
+                    <ul>
+                        <li>Advanced Features</li>
+                        <li>Premium Quality</li>
+                        <li>Long Warranty</li>
+                        <li>3-Year Warranty</li>
+                    </ul>
+                    <a href="contact.html" class="btn">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+<!-- img suplyers  -->
+
+<p style="text-align: center;"> Api Spices Gane Meyalagen</p>
+<div class="page-wrapper">
+    <div class="slider-wrapper">
+        <div class="slider-content">
+            <div class="slider-item active">
+                <img src="img/mm.png" alt="Image 1">
+            </div>
+            <div class="slider-item">
+                <img src="https://via.placeholder.com/800x500?text=Image+2" alt="Image 2">
+            </div>
+            <div class="slider-item">
+                <img src="img/rr.png" alt="Image 3">
+            </div>
+            <div class="slider-item">
+                <img src="img/kk.png" alt="Image 4">
+            </div>
+            <div class="slider-item">
+                <img src="https://via.placeholder.com/800x500?text=Image+5" alt="Image 5">
+            </div>
+        </div>
+        <button class="prev-button">&#10094;</button>
+        <button class="next-button">&#10095;</button>
+    </div>
+</div>
+
+<br><br><br>
+
+
+<div class="crazy-container">
+    <div class="crazy-text-section">
+        <h2 class="crazy-sub-title">Quality Comes First</h2>
+        <h1 class="crazy-main-title">Manufacturing Spices</h1>
+        <p class="crazy-description">At Samagi Spices, we believe in using only the finest ingredients to create our premium spices. Our manufacturing process starts with sourcing high-quality spices from the best regions, followed by expertly roasting, grinding, and blending to create unique, bold flavors for all of your culinary adventures.</p>
+        <div class="crazy-steps-container">
+            <div class="crazy-step">
+                <h3 class="crazy-step-title">01. Collection & Sorting</h3>
+                <p>Only the best spices are selected and sorted.</p>
+            </div>
+            <div class="crazy-step">
+                <h3 class="crazy-step-title">02. Peeling & Rolling</h3>
+                <p>Our spices are carefully peeled and rolled to release their unique flavors.</p>
+            </div>
+            <div class="crazy-step">
+                <h3 class="crazy-step-title">03. Fumigation</h3>
+                <p>We take care of your health and fumigate to eliminate any potential pests.</p>
+            </div>
+            <div class="crazy-step">
+                <h3 class="crazy-step-title">04. Moisture Checking</h3>
+                <p>Our spices are checked for moisture levels to ensure their freshness.</p>
+            </div>
+            <div class="crazy-step">
+                <h3 class="crazy-step-title">05. Grading</h3>
+                <p>Our spices are graded to ensure that only the best quality spices make it to your kitchen.</p>
+            </div>
+            <div class="crazy-step">
+                <h3 class="crazy-step-title">06. Packing</h3>
+                <p>Our spices are packed with care to ensure their freshness reaches you intact.</p>
+            </div>
+            <div class="crazy-step">
+                <h3 class="crazy-step-title">07. Adding a Final Touch</h3>
+                <p>Our expert team gives a final touch to each spice to make sure you get the best flavor experience.</p>
+            </div>
+        </div>
+        <p class="crazy-circle-info">Able to see half of the circle here.</p>
+    </div>
+    <div class="crazy-image-section">
+        <img src="img/mm.png" class="crazy-main-image" alt="Professional Spices">
+    </div>
+</div>
+
+<br>
+
+<!-- New Features Section 24/7  -->
+<div class="features-container">
+    <div class="feature" style="animation-delay: 0s;">
+        <img src="img/kk.png" alt="Worldwide Delivery">
+        <h3>WORLDWIDE DELIVERY</h3>
+        <p>We offer both air and sea shipping options to ensure our premium spices can reach you no matter where you are located.</p>
+    </div>
+    <div class="feature" style="animation-delay: 0.5s;">
+        <img src="img/kk.png" alt="24/7 Chat System">
+        <h3>24/7 CHAT SYSTEM</h3>
+        <p>Need help? Our friendly support team is available around the clock to answer any questions.</p>
+    </div>
+    <div class="feature" style="animation-delay: 1s;">
+        <img src="img/kk.png" alt="Sustainable Practices">
+        <h3>SUSTAINABLE PRACTICES</h3>
+        <p>We take pride in our sustainable business practices, including sourcing spices from fair trade suppliers and using eco-friendly packaging.</p>
+    </div>
+    <div class="feature" style="animation-delay: 1.5s;">
+        <img src="img/kk.png" alt="Company Growth">
+        <h3>COMPANY GROWTH</h3>
+        <p>With a passion for spices and a commitment to quality, our company has seen rapid growth and a loyal customer base.</p>
+    </div>
+</div>
+<br><br>
+
+<!-- feedback cards  -->
+
+
+<div class="feedback_slider-wrapper">
+    <h1 style="text-align: center;">What Our Clients Say!</h1>
+    <h3 class="feedback_company-name" style="text-align: center;">Ceylon Spice Haven (Pvt) Ltd</h3>
+
+    <div class="feedback_rating-section">
+        <a href="#" class="feedback_rating-link">
+            <img src="img/avfci721i.png" alt="Google Logo" class="feedback_google-logo">    
+            <div class="feedback_rating">4.6</div>
+            <div class="feedback_stars">
+                <span class="feedback_full-star">&#9733;</span>
+                <span class="feedback_full-star">&#9733;</span>
+                <span class="feedback_full-star">&#9733;</span>
+                <span class="feedback_full-star">&#9733;</span>
+                <span class="feedback_half-star">&#9733;</span> <!-- Use half-star character -->
+            </div>
+            <div class="feedback_reviews-count">12 reviews</div>
+        </a>
+    </div>
+
+    <div class="feedback_testimonial-container">
+        
+        <div class="feedback_testimonial-cards">
+
+            <!-- Card 1 -->
+            <div class="feedback_card">
+                <img src="img/rr.png" alt="Client Logo" class="feedback_logo">
+                <p>"Excellent engineering services..."</p>
+                <a href="#" class="feedback_review-link"><strong>Read full review</strong></a>
+                <span class="feedback_date">12/10/2023</span>
+            </div>
+            <!-- Card 2 -->
+            <div class="feedback_card">
+                <img src="img/rr.png" alt="Client Logo" class="feedback_logo">
+                <p>"Very reliable and professional..."</p>
+                <a href="#" class="feedback_review-link"><strong>Read full review</strong></a>
+                <span class="feedback_date">11/10/2023</span>
+            </div>
+            <!-- Card 3 -->
+            <div class="feedback_card">
+                <img src="img/rr.png" alt="Client Logo" class="feedback_logo">
+                <p>"Outstanding customer service..."</p>
+                <a href="#" class="feedback_review-link"><strong>Read full review</strong></a>
+                <span class="feedback_date">02/08/2023</span>
+            </div>
+            <!-- Card 4 -->
+            <div class="feedback_card">
+                <img src="img/rr.png" alt="Client Logo" class="feedback_logo">
+                <p>"Innovative solutions that meet our needs..."</p>
+                <a href="#" class="feedback_review-link"><strong>Read full review</strong></a>
+                <span class="feedback_date">29/09/2023</span>
+            </div>
+            <!-- Card 5 -->
+            <div class="feedback_card">
+                <img src="img/rr.png" alt="Client Logo" class="feedback_logo">
+                <p>"Highly recommended for any complex projects..."</p>
+                <a href="#" class="feedback_review-link"><strong>Read full review</strong></a>
+                <span class="feedback_date">22/09/2023</span>
+            </div>
+            <!-- Card 6 -->
+            <div class="feedback_card">
+                <img src="img/rr.png" alt="Client Logo" class="feedback_logo">
+                <p>"Professional, timely, and effective..."</p>
+                <a href="#" class="feedback_review-link"><strong>Read full review</strong></a>
+                <span class="feedback_date">15/09/2023</span>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+    <br><br>
+    <h1 class="faq-header" id="animatedHeader">Questions ? F.A.Q</h1>
+
+    <div class="fqacontainer">
+        <!-- Left Side: Text Content -->
+        <div class="text-content">
+
+            <div class="faq">
+                <div class="question" onclick="toggleAnswer(this)">
+                    What is Sri Lankan cinnamon and why is it special?
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="answer">
+                    Sri Lankan cinnamon, also known as Ceylon cinnamon, is the highest quality variety of cinnamon, only grown in Sri Lanka. It has a sweet and delicate flavor, making it highly sought after in cooking and baking.
+                </div>
+            </div>
+            <div class="faq">
+                <div class="question" onclick="toggleAnswer(this)">
+                    How is cinnamon harvested?
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="answer">
+                    Cinnamon is harvested from the inner bark of the cinnamon tree. The outer bark is stripped away, and the inner bark curls into quills as it dries.
+                </div>
+            </div>
+            <!-- Add more FAQs as needed -->
+
+            <div class="faq">
+                <div class="question" onclick="toggleAnswer(this)">
+                    How is cinnamon harvested?
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="answer">
+                    Cinnamon is harvested from the inner bark of the cinnamon tree. The outer bark is stripped away, and the inner bark curls into quills as it dries.
+                </div>
+            </div>
+
+            <div class="faq">
+                <div class="question" onclick="toggleAnswer(this)">
+                    How is cinnamon harvested?
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="answer">
+                    Cinnamon is harvested from the inner bark of the cinnamon tree. The outer bark is stripped away, and the inner bark curls into quills as it dries.
+                </div>
+            </div>
+
+            <div class="faq">
+                <div class="question" onclick="toggleAnswer(this)">
+                    How is cinnamon harvested?
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="answer">
+                    Cinnamon is harvested from the inner bark of the cinnamon tree. The outer bark is stripped away, and the inner bark curls into quills as it dries.
+                </div>
+            </div>
+
+            <div class="faq">
+                <div class="question" onclick="toggleAnswer(this)">
+                    How is cinnamon harvested?
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="answer">
+                    Cinnamon is harvested from the inner bark of the cinnamon tree. The outer bark is stripped away, and the inner bark curls into quills as it dries.
+                </div>
+            </div>
+
+            <div class="faq">
+                <div class="question" onclick="toggleAnswer(this)">
+                    How is cinnamon harvested?
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="answer">
+                    Cinnamon is harvested from the inner bark of the cinnamon tree. The outer bark is stripped away, and the inner bark curls into quills as it dries.
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Side: Image -->
+        <div class="image-content">
+            <img src="img/mm.png" alt="Image Description" class="image">
+        </div>
+    </div>
+    <br>
+
+<!-- Footer  -->
+
+    
+    <footer style="background-color: #333; color: #ffffff; padding: 20px 0;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+    
+            <!-- Social Icons and Address -->
+            <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 15px;">
+                <div style="margin-right: 20px;">
+                    <a href="https://www.facebook.com" style="color: #ffffff; margin: 0 10px; text-decoration: none;">
+                        <i class="fab fa-facebook-square" style="font-size: 24px;"></i>
+                    </a>
+                    <a href="https://www.instagram.com" style="color: #ffffff; margin: 0 10px; text-decoration: none;">
+                        <i class="fab fa-instagram" style="font-size: 24px;"></i>
+                    </a>
+                    <a href="https://www.linkedin.com" style="color: #ffffff; margin: 0 10px; text-decoration: none;">
+                        <i class="fab fa-linkedin" style="font-size: 24px;"></i>
+                    </a>
+                </div>
+            </div>
+    
+            <div style="text-align: center; margin-bottom: 15px;">
+                <p>Address: No 24, Kapuela Road, Ambalangoda, Sri Lanka</p>
+            </div>
+    
+            <!-- Company Name and Contact Information -->
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                <div style="text-align: left;">
+                    <p style="margin: 0;">The Ceylon Spice Haven (Pvt) Ltd.</p>
+                </div>
+                <div style="text-align: right;">
+                    <p style="margin: 0;">Contact: +94 741 471 91 | +61 123456</p>
+                </div>
+            </div>
+    
+            <div style="text-align: center; margin-bottom: 10px;">
+                <p style="margin: 0;">
+                    <a href="mailto:punsithranvidu@gmail.com" style="color: #ffffff; text-decoration: none;">punsithranvidu@gmail.com</a>
+                </p>
+                <p style="margin: 0;">
+                    <a href="mailto:ceylonspicehaven1@gmail.com" style="color: #ffffff; text-decoration: none;">ceylonspicehaven1@gmail.com</a>
+                </p>
+            </div>
+    
+            <!-- Copyright -->
+            <div style="text-align: center; margin-top: 10px;">
+                <p style="margin: 0;">Copyright © 2024 Ceylon Spice Haven - All Rights Reserved.</p>
+            </div>
+    
+        </div>
+    </footer>
+    
+    <style>
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            footer div {
+                flex-direction: column; /* Stack elements vertically on smaller screens */
+                align-items: center; /* Center align items */
+                text-align: center; /* Center text */
+            }
+        }
+    </style>
+    
+    
+
+
+    <script>
+        const countries = ["Srilankan", "CEYLON"];
+        let countryIndex = 0;
+
+        function changeCountryText() {
+            const countryElement = document.getElementById("country");
+            countryElement.classList.remove('show');
+            setTimeout(() => {
+                countryElement.textContent = countries[countryIndex];
+                countryElement.classList.add('show');
+            }, 1000); // Match transition duration
+            countryIndex = (countryIndex + 1) % countries.length;
+        }
+
+        // Start the country name animation
+        setInterval(changeCountryText, 4000); // Increase interval to slow down transitions
+    </script>
+
+    
+<script>
+    let currentIndex = 0;
+    const slides = document.querySelectorAll('.slide');
+    
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.style.opacity = (i === index) ? '1' : '0';
+        });
+    }
+    
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % slides.length;
+        showSlide(currentIndex);
+    }
+    
+    showSlide(currentIndex); // Show the first slide initially
+    setInterval(nextSlide, 5000); // Change slide every 5 seconds
+    
+    // Toggle Navbar Menu (Hamburger icon)
+    const navbarToggle = document.getElementById('navbar-toggle');
+    const navbarMenu = document.getElementById('navbar-menu');
+    const closeButton = document.getElementById('close-button');
+    
+    navbarToggle.addEventListener('click', () => {
+        navbarMenu.classList.toggle('active');
+    });
+    
+    // Close button functionality
+    closeButton.addEventListener('click', () => {
+        navbarMenu.classList.remove('active');
+    });
+    </script>
+    
+
+<!-- img suplyers  -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        let slideIndex = 0;
+        const slides = document.querySelectorAll('.slider-item');
+        const prevBtn = document.querySelector('.prev-button');
+        const nextBtn = document.querySelector('.next-button');
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.style.display = (i === index) ? 'block' : 'none';
+            });
+        }
+
+        function nextSlide() {
+            slideIndex = (slideIndex + 1) % slides.length;
+            showSlide(slideIndex);
+        }
+
+        function prevSlide() {
+            slideIndex = (slideIndex - 1 + slides.length) % slides.length;
+            showSlide(slideIndex);
+        }
+
+        nextBtn.addEventListener('click', nextSlide);
+        prevBtn.addEventListener('click', prevSlide);
+
+        // Show the first slide
+        showSlide(slideIndex);
+    });
+</script>
+<!-- img manufact   -->
+<!-- img manufact   -->
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const steps = document.querySelectorAll('.crazy-step');
+
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        steps.forEach(step => {
+            observer.observe(step);
+        });
+    });
+
+    // Image animation
+    document.addEventListener("DOMContentLoaded", () => {
+        const image = document.querySelector('.crazy-main-image');
+
+        // Check screen size
+        if (window.innerWidth < 768) {
+            // For small screens, directly show the image without animation
+            image.style.opacity = 1;
+            image.style.transform = 'translateX(0)';
+        } else {
+            // For larger screens, set up the Intersection Observer
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateX(0)'; // Slide in from right
+                        observer.unobserve(entry.target); // Stop observing once animated
+                    }
+                });
+            }, {
+                threshold: 0.1 // Trigger when 10% of the element is in view
+            });
+
+            imageObserver.observe(image);
+        }
+    });
+
+
+</script>
+
+
+<script>
+    // 24/7
+    document.addEventListener("DOMContentLoaded", () => {
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = 'translateY(0)';
+                    observer.unobserve(entry.target); // Stop observing once animated
+                }
+            });
+        }, {
+            threshold: 0.5 // Trigger when 50% of the element is in view
+        });
+    
+        const features = document.querySelectorAll('.feature');
+        features.forEach(feature => {
+            observer.observe(feature);
+        });
+    });
+</script>
+
+
+
+<!-- feedback card script    -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const slider = document.querySelector('.feedback_testimonial-cards');
+        if (!slider) return;
+    
+        function performNudge() {
+            // Adjust this value to increase/decrease the nudge distance
+            const nudgeFactor = 6; // Change this number for more or less movement
+            const nudgeDistance = window.innerWidth < 960 ? slider.children[0].offsetWidth : slider.clientWidth / nudgeFactor; 
+            slider.scrollBy({ left: nudgeDistance, behavior: 'smooth' });
+            setTimeout(() => {
+                slider.scrollBy({ left: -nudgeDistance, behavior: 'smooth' });
+            }, 1000);
+        }
+    
+        let observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    performNudge();
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+    
+        observer.observe(slider);
+    
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+    
+        slider.addEventListener('mousedown', (e) => {
+            isDown = true;
+            startX = e.pageX - slider.offsetLeft;
+            scrollLeft = slider.scrollLeft;
+        });
+    
+        slider.addEventListener('mouseup', () => { isDown = false; });
+        slider.addEventListener('mouseleave', () => { isDown = false; });
+        slider.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - slider.offsetLeft;
+            const walk = (x - startX) * 3;
+            slider.scrollLeft = scrollLeft - walk;
+        });
+    
+        slider.addEventListener('touchstart', (e) => {
+            isDown = true;
+            startX = e.touches[0].pageX - slider.offsetLeft;
+            scrollLeft = slider.scrollLeft;
+        });
+    
+        slider.addEventListener('touchend', () => { isDown = false; });
+        slider.addEventListener('touchmove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.touches[0].pageX - slider.offsetLeft;
+            const walk = (x - startX) * 3;
+            slider.scrollLeft = scrollLeft - walk;
+        });
+    });
+    </script>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- F.Q.A script    -->
+
+<script>
+
+    document.addEventListener('DOMContentLoaded', function() {
+    const header = document.getElementById('animatedHeader');
+    const questions = document.querySelectorAll('.question');
+    const firstAnswer = questions[0].nextElementSibling; // Get the first answer
+    const firstIcon = questions[0].querySelector('.toggle-icon'); // Get the first question's icon
+
+    let hasAnimated = false; // Flag to ensure animation only plays once
+
+
+
+    // Open the first FAQ answer by default
+    firstAnswer.classList.add('open');
+    firstAnswer.style.maxHeight = firstAnswer.scrollHeight + 'px';
+    firstIcon.textContent = '-';
+
+    // Scroll event to trigger header animation
+    window.addEventListener('scroll', function() {
+        let rect = header.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom >= 0 && !hasAnimated) {
+            animateHeader();
+        }
+    });
+
+    // Function to toggle FAQ answers on click
+    function toggleAnswer(element) {
+        const answer = element.nextElementSibling;
+        const isExpanded = answer.classList.contains('open');
+        const allAnswers = document.querySelectorAll('.answer');
+        const allIcons = document.querySelectorAll('.toggle-icon');
+
+        // Close all answers and reset all icons to '+'
+        allAnswers.forEach(ans => {
+            ans.classList.remove('open');
+            ans.style.maxHeight = '0';
+        });
+        allIcons.forEach(icon => {
+            icon.textContent = '+';
+        });
+
+        // Expand the clicked answer if it was not already open
+        if (!isExpanded) {
+            answer.classList.add('open');
+            answer.style.maxHeight = answer.scrollHeight + 'px';
+            element.querySelector('.toggle-icon').textContent = '-';
+        }
+    }
+
+    // Attach event listeners to each question
+    questions.forEach(question => {
+        question.addEventListener('click', function() {
+            toggleAnswer(question);
+        });
+    });
+});
+
+
+</script>
+    
+
+<!-- small cnt card  script    -->
+
+<script>
+    function toggleCard() {
+        const card = document.getElementById('messageCard');
+        card.classList.toggle('small_cnt_show'); // Toggle the card visibility
+    }
+
+    // Close the card if the user clicks outside of it
+    document.addEventListener('click', function(event) {
+        const card = document.getElementById('messageCard');
+        const messageIcon = document.querySelector('.small_cnt_message-icon');
+
+        // Check if the click was outside the message icon and the card
+        if (!messageIcon.contains(event.target) && card.classList.contains('small_cnt_show')) {
+            card.classList.remove('small_cnt_show'); // Hide the card
+        }
+    });
+</script>
+
+</body>
+</html>

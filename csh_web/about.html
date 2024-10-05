@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-logo">
+                <a href="index.html">
+                    <img src="img/Transparent logo.jpg" alt="Logo">
+                </a>
+            </div>
+            <div class="navbar-toggle" id="navbar-toggle">
+                &#9776; <!-- Hamburger icon -->
+            </div>
+            <ul class="navbar-menu" id="navbar-menu">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="#services">OUR SERVICES</a></li>
+                <li><a href="#contact">CONTACT US</a></li>
+                <li><a href="#projects">PROJECTS</a></li>
+                <li><a href="about.html" class="active">ABOUT US</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main content -->
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis sit laudantium expedita odit eos dignissimos, et, inventore iure maxime quam...</p>
+
+    <script>
+        // Toggle Navbar Menu
+        const navbarToggle = document.getElementById('navbar-toggle');
+        const navbarMenu = document.getElementById('navbar-menu');
+
+        navbarToggle.addEventListener('click', () => {
+            navbarMenu.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

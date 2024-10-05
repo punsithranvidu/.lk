@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Background</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            overflow: hidden; /* Prevent scrolling */
+            position: relative; /* For positioning stains */
+            background-color: transparent; /* No solid background color */
+        }
+
+        /* Stains styles */
+        .stain {
+            position: absolute;
+            border-radius: 50%; /* Make them round */
+            opacity: 0.7; /* Slight transparency */
+            animation: move 10s linear infinite; /* Animation for movement */
+        }
+
+        @keyframes move {
+            0% {
+                transform: translate(0, 0);
+            }
+            100% {
+                transform: translate(100px, 100px); /* Adjust movement distance */
+            }
+        }
+
+        /* You can create multiple stains with different sizes and colors */
+        .stain1 {
+            width: 100px; /* Width of stain */
+            height: 100px; /* Height of stain */
+            background-color: rgba(255, 105, 180, 0.5); /* Light pink stain */
+            top: 10%;
+            left: 20%;
+            animation-duration: 12s; /* Different duration for variety */
+        }
+
+        .stain2 {
+            width: 80px;
+            height: 80px;
+            background-color: rgba(255, 182, 193, 0.5); /* Lighter pink */
+            top: 30%;
+            left: 60%;
+            animation-duration: 15s; /* Different duration */
+        }
+
+        .stain3 {
+            width: 120px;
+            height: 120px;
+            background-color: rgba(255, 192, 203, 0.5); /* Another shade */
+            top: 50%;
+            left: 80%;
+            animation-duration: 10s; /* Different duration */
+        }
+    </style>
+</head>
+<body>
+    <div class="stain stain1"></div>
+    <div class="stain stain2"></div>
+    <div class="stain stain3"></div>
+    <!-- You can add more stains as needed -->
+</body>
+</html>
